@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 const states = [
     { state: 'Abia State', capital: 'Umuahia' },
@@ -40,6 +41,8 @@ const states = [
     { state: 'Zamfara State', capital: 'Gusau' },
     { state: 'Abuja', capital: 'FCT' }
 ];
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.json(states);
