@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
     res.json(states);
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log('Listening');
 });
 
